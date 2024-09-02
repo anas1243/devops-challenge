@@ -2,7 +2,7 @@
 
 This project is a hands-on lab to automate the deployment of a python webapp using AWS, Docker, Terraform, and Jenkins
 
-## Local Test
+## Local Deployment
 
 1- Build the docker image
 
@@ -49,3 +49,7 @@ This project is a hands-on lab to automate the deployment of a python webapp usi
 ![Jenkins Dashboard](images/jenkins-dashboard.png)
 
 ![Jenkins Dashboard](images/jenkins-home.png)
+
+4- Add dockerhub credentials
+
+![Jenkins Dashboard](images/dockerhub-cred.png)
