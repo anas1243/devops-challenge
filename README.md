@@ -69,5 +69,29 @@ in the github repo we need to enable the webhook feature to push the new code ve
 
 7- make a change in the application to detect the triggering of the pipeline
 
+![Jenkins Dashboard](images/new-release.png)
+
+** very important note **
+can you see the commit hash is the same in my vscode and in jenkins. So it detected the correct push :wink:
+
+after changing in the code and push these changes to github, jenkins should get an API call and the pipeline should be trigger  as shown below. 
+
+![Jenkins Dashboard](images/trigger-jenkins.png)
 
 
+after waiting the pipeline to finish it's work successfully, we need to test the three endpoint
+A- /
+B- /healthcheck
+c- /test-automation
+
+![Jenkins Dashboard](images/success-pipeline.png)
+
+8- Test the webapp
+
+now lets curl our APIs or simply use the browser
+
+![Jenkins Dashboard](images/root-test.png)
+
+![Jenkins Dashboard](images/healthcheck-test.png)
+
+![Jenkins Dashboard](images/new-release-test.png)
