@@ -33,7 +33,7 @@ def main():
     return response
 
 @app.route('/test-automation') 
-def main():
+def automation():
     resp = {
         "Automation":"Done!"
     }
