@@ -26,7 +26,7 @@ This project is a hands-on lab to automate the deployment of a python webapp usi
 ![Test the APP](images/curl-commands.png)
 
 
-## AWS Test
+## AWS Deployment
 
 1- run Terraform to provision the infra
 
@@ -53,3 +53,21 @@ This project is a hands-on lab to automate the deployment of a python webapp usi
 4- Add dockerhub credentials
 
 ![Jenkins Dashboard](images/dockerhub-cred.png)
+
+5- Create, configure, and run the pipeline
+
+I created a multi-branch pipeline in order to automate all env in the company. I created for now a jenkins file in the main branch that build, push, and deploy and code on the same instance
+
+![Jenkins Dashboard](images/pipeline-test.png)
+
+6- configure webhook to auto deploy the app
+
+in the github repo we need to enable the webhook feature to push the new code version to the servers directly
+
+![Jenkins Dashboard](images/github-webhook.png)
+
+
+7- make a change in the application to detect the triggering of the pipeline
+
+
+
