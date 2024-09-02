@@ -26,7 +26,7 @@ pipeline {
                 // stop and remove the old version (as we're testing it's fine to have a downtime here)
                 sh "docker stop devops && docker rm devops"
                 // run the container on the host
-                sh "docker run -d --name devops -p 8888:8888 anas1243/devops-challenge:latest"
+                sh "docker run -d --restart=always --name devops -p 8888:8888 anas1243/devops-challenge:latest"
             }
         }
     }
