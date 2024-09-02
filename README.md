@@ -1,33 +1,26 @@
-# DevOps Challenge
+# Aim
 
-Fork this project and build the infrastructure of this API the way you want, you can use Docker Compose, AWS or any other way you like, the goal here is to analyze your commits to understand the way you work.
+This project is a hands-on lab to automate the deployment of a python webapp using AWS, Docker, Terraform, and Jenkins
 
-You have one week to complete the test, when you're done send an email to [anderson.lima@shawandpartners.com](mailto:anderson.lima@shawandpartners.com)
-We will schedule a meeting for you to explain your solution
+## Local Test
 
-Tips:
+1- Build the docker image
 
-The application runs on port 8888
+``` docker build . -t anas1243/devops-challenge ```
 
-This app only has two endpoints, the / which returns the following string:
+![Build Docker](images/build-docker.png)
 
-```jsx
-{"App Test": "Alive"}
-```
+2- Run a Docker container from this image
 
-And the Healthcheck endpoint that returns the following string:
-
-```jsx
-{"Status": "heart beating steady and strong"}
-```
-
-Run the application
-```jsx
-pip install -r src/requirements.txt
-cd src
-gunicorn --bind 0.0.0.0:8888 wsgi:app
-```
+``` docker run -d --name devops -p 8888:8888 anas1243/devops-challenge:latest ```
 
 
+![Build Run](images/run-docker.png)
 
-Any questions please contact: [anderson.lima@shawandpartners.com](mailto:anderson.lima@shawandpartners.com)
+3- Test the deployment using Curl utility
+
+``` curl http://localhost:8888/ ```
+
+``` curl http://localhost:8888/healthcheck ```
+
+![Test the APP](images/curl-commands.png)
